@@ -1,0 +1,13 @@
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Release\netstandard2.1\RevenueCompanion.Application.deps.json
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Release\netstandard2.1\RevenueCompanion.Application.dll
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Release\netstandard2.1\RevenueCompanion.Application.pdb
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Release\netstandard2.1\RevenueCompanion.Domain.dll
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Release\netstandard2.1\RevenueCompanion.Domain.pdb
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Release\netstandard2.1\RevenueCompanion.Application.csproj.AssemblyReference.cache
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Release\netstandard2.1\RevenueCompanion.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Release\netstandard2.1\RevenueCompanion.Application.AssemblyInfoInputs.cache
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Release\netstandard2.1\RevenueCompanion.Application.AssemblyInfo.cs
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Release\netstandard2.1\RevenueCompanion.Application.csproj.CoreCompileInputs.cache
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Release\netstandard2.1\RevenueCompanion.Application.csproj.CopyComplete
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Release\netstandard2.1\RevenueCompanion.Application.dll
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Release\netstandard2.1\RevenueCompanion.Application.pdb

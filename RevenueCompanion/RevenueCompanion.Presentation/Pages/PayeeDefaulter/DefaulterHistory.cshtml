@@ -1,0 +1,43 @@
+﻿@page
+@model RevenueCompanion.Presentation.Pages.SummaryReport.DefaulterHistoryModel
+@{
+}
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">                
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xl-6">
+                        <h3>Defaulter History</h3>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xl-6 row">
+                        <div class="form-group col-md-4">
+                            <label>Year</label>
+                            <select class="form-control" id="yearField">
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="payerUtin">Payer Utin</label>
+                            <div class="form-group default-select select2Style mt-3">
+                                <select class="form-control select2" data-placeholder="Select" id="payerUtin">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-primary" style="margin-top: 28px;" id="filterTable">Filter</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br />
+            <div id="RequestContainer"></div>
+
+        </div>
+    </div>
+    <div id="cover-spin"></div>
+</div>
+
+@section Scripts{
+    <script src="~/appscripts/defaulterHistory.js" asp-append-version="true"></script>
+}

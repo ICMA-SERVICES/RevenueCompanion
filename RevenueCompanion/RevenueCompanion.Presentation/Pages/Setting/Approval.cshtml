@@ -1,0 +1,94 @@
+﻿@page
+@model RevenueCompanion.Presentation.Pages.Setting.ApprovalModel
+@{
+}
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Add Approval Setting</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="editUser_RoleId" class="control-label">Please select Menu<span class="text-danger">*</span></label>
+                            <select class="form-control select2-chosen" asp-for="MenuSetupId" asp-items="@(new SelectList(Model.Menus,"MenuSetupId","MenuName"))">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="NoOfRequiredApproval" class="control-label">Max Approval Count<span class="text-danger">*</span></label>
+                            <input type="number" required class="form-control" id="NoOfRequiredApproval" asp-for="NoOfRequiredApproval" placeholder="max approval count">
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-info" id="btn-AddUser">Save Changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="editModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Edit Approval Setting</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                   
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input id="ApprovalSettingId" type="hidden" />
+                            <label class="control-label">Max Approval Count<span class="text-danger">*</span></label>
+                            <input type="number" required class="form-control" id="EditNoOfRequiredApproval" placeholder="max approval count">
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-info" id="btn-EditUser">Update</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="page-title">
+    <h3 class="title">Approval Settings</h3>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Approval Settings
+                <br />
+                <br />
+                <button class="btn btn-primary right" data-toggle="modal" data-target="#myModal">Add New</button>
+            </div>
+            <br />
+            <div id="approvalSettingsContainer"></div>
+
+        </div>
+    </div>
+    <div id="cover-spin"></div>
+</div>
+
+@section Scripts{
+    <script src="~/appscripts/approvalsettings.js" asp-append-version="true"></script>
+}

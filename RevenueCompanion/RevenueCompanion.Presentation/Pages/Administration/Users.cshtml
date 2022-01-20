@@ -1,0 +1,133 @@
+﻿@page
+@model RevenueCompanion.Presentation.Pages.Administration.UsersModel
+@{
+}
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Add Users</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="FirstName" class="control-label">First Name<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="FirstName" placeholder="First Name">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="LastName" class="control-label">Surname<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="LastName" placeholder="Last Name">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="Email" class="control-label">Email <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="Email" placeholder="Email Address">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="field-2" class="control-label">Role<span class="text-danger">*</span></label>
+                            <select class="form-control select2-chosen" id="RoleId" asp-items="@(new SelectList(Model.Roles,"RoleId","RoleName"))">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                @*<div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="field-3" class="control-label">Phone Number</label>
+                            <input type="text" class="form-control" id="field-3" placeholder="Phone Number">
+                        </div>
+                    </div>
+                    
+                </div>*@
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-info" id="btn-AddUser">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="editUserModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Edit Users</h4>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="editUser_Id"/>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="editUser_FirstName" class="control-label">First Name<span class="text-danger">*</span></label>
+                            <input type="text" required class="form-control" id="editUser_FirstName" placeholder="First Name">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="editUser_LastName" class="control-label">Surname<span class="text-danger">*</span></label>
+                            <input type="text" required class="form-control" id="editUser_LastName" placeholder="Last Name">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="editUser_Email" class="control-label">Email</label>
+                            <input type="email" required readonly class="form-control" id="editUser_Email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="editUser_RoleId" class="control-label">Role<span class="text-danger">*</span></label>
+                            <select class="form-control select2-chosen" id="editUser_RoleId" asp-items="@(new SelectList(Model.Roles,"RoleId","RoleName"))">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+              
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-info" id="btn-EditUser">Update</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page-title">
+    <h3 class="title">Users</h3>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Users</h3>
+                <br />
+                <br />
+                <button class="btn btn-primary right" data-toggle="modal" data-target="#myModal">Add New</button>
+            </div>
+            <br />
+            <div id="UserContainer"></div>
+
+        </div>
+    </div>
+    <div id="cover-spin"></div>
+</div>
+
+@section Scripts{ 
+    <script src="~/appscripts/user.js" asp-append-version="true"></script>
+}

@@ -1,0 +1,567 @@
+﻿@page
+@model RevenueCompanion.Presentation.Pages.CreditNote.AutomaticModel
+@{
+    var menuSetupId = ViewBag.menuSetupId;
+}
+<input  type="hidden" value="@menuSetupId" id="menuSetupId"/>
+<style>
+    .wizard {
+        margin: 20px auto;
+        background: #fff;
+        padding-left:0px;
+    }
+
+        .wizard .nav-tabs {
+            position: relative;
+            margin: 40px auto;
+            margin-bottom: 0;
+            border-bottom-color: #e0e0e0;
+        }
+
+        .wizard > div.wizard-inner {
+            position: relative;
+        }
+
+    .connecting-line {
+        height: 2px;
+        background: #e0e0e0;
+        position: absolute;
+        width: 60%;
+        margin: 0 auto;
+        left: 130px;
+/*        right: 0;*/
+        top: 50%;
+        z-index: 1;
+    }
+
+    .wizard .nav-tabs > li.active > a, .wizard .nav-tabs > li.active > a:hover, .wizard .nav-tabs > li.active > a:focus {
+        color: #555555;
+        cursor: default;
+        border: 0;
+        border-bottom-color: transparent;
+    }
+
+    span.round-tab {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        display: inline-block;
+        border-radius: 100px;
+        background: #fff;
+        border: 2px solid #e0e0e0;
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        text-align: center;
+        font-size: 25px;
+    }
+
+        span.round-tab i {
+            color: #555555;
+        }
+
+    .wizard li.active span.round-tab {
+        background: #fff;
+        border: 2px solid #5bc0de;
+    }
+
+        .wizard li.active span.round-tab i {
+            color: #5bc0de;
+        }
+
+    span.round-tab:hover {
+        color: #333;
+        border: 2px solid #333;
+    }
+
+    .wizard .nav-tabs > li {
+        width: 25%;
+    }
+
+    .wizard li:after {
+        content: " ";
+        position: absolute;
+        left: 46%;
+        opacity: 0;
+        margin: 0 auto;
+        bottom: 0px;
+        border: 5px solid transparent;
+        border-bottom-color: #5bc0de;
+        transition: 0.1s ease-in-out;
+    }
+
+    .wizard li.active:after {
+        content: " ";
+        position: absolute;
+        left: 46%;
+        opacity: 1;
+        margin: 0 auto;
+        bottom: 0px;
+        border: 10px solid transparent;
+        border-bottom-color: #5bc0de;
+    }
+
+    .wizard .nav-tabs > li a {
+        width: 70px;
+        height: 70px;
+        margin: 20px auto;
+        border-radius: 100%;
+        padding: 0;
+    }
+
+        .wizard .nav-tabs > li a:hover {
+            background: transparent;
+        }
+
+    .wizard .tab-pane {
+        position: relative;
+        padding-top: 50px;
+    }
+
+    .wizard h3 {
+        margin-top: 0;
+    }
+
+    @@media( max-width : 585px ) {
+
+        .wizard {
+            width: 90%;
+            height: auto !important;
+        }
+
+        span.round-tab {
+            font-size: 16px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .wizard .nav-tabs > li a {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .wizard li.active:after {
+            content: " ";
+            position: absolute;
+            left: 35%;
+        }
+    }
+
+    .nav.nav-tabs {
+        border-bottom: 0;
+        background: white !important;
+        box-shadow: none;
+    }
+
+    .last-child-span::after {
+        left: 84% !important;
+    }
+</style>
+
+<div class="page-title">
+    <h3 class="title">Automatic Allocation</h3>
+</div>
+
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Assessment Details</h4>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered">
+                        
+                        <tbody>
+                            <tr>
+                                <th>Total Amount</th>
+                                <td id="TotalAmountModal"></td>
+                            </tr>
+                            <tr>
+                                <th>Amount Paid</th>
+                                <td id="AmountPaidModal"></td>
+                            </tr>
+                            <tr>
+                                <th>Amount Accessed</th>
+                                <td id="AmountAccessedModal"></td>
+                            </tr>
+                            <tr>
+                                <th>Revenue Name</th>
+                                <td id="RevenueNameModal"></td>
+                            </tr>
+                            <tr>
+                                <th>RevenueCode</th>
+                                <td id="RevenueCode"></td>
+                            </tr>
+                            <tr>
+                                <th>Agency Name</th>
+                                <td id="AgencyName"></td>
+                            </tr>
+                            <tr>
+                                <th>Tax Year</th>
+                                <td id="TaxYear"></td>
+                            </tr>
+                            <tr>
+                                <th>Date Created</th>
+                                <td id="DateCreated"></td>
+                            </tr>
+                            <tr>
+                                <th>Assessment Created By</th>
+                                <td id="AssessmentCreatedBy"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Wizard with Validation -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Generate payment Assessment</h3>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <section>
+                        <div class="wizard">
+                            <div class="wizard-inner">
+                                <div class="connecting-line"></div>
+                                <ul class="nav nav-tabs" role="tablist">
+
+                                    <li role="presentation" class="active">
+                                        <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Search Payment Reference Number">
+                                            <span class="round-tab">
+                                                <i class="glyphicon glyphicon-search"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <li role="presentation" class="disabled">
+                                        <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Verify Assessment Reference Number">
+                                            <span class="round-tab">
+                                                <i class="glyphicon glyphicon-search"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li role="presentation" class="disabled last-child-span">
+                                        <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Credit Note Request">
+                                            <span class="round-tab">
+
+                                                <i class="glyphicon glyphicon-ok"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    @*<li role="presentation" class="disabled">
+                                        <a href="#step3" data-toggle="tab" aria-controls="complete" role="tab" title="Completed, Submitted for approval">
+                                            <span class="round-tab">
+
+                                                <i class="glyphicon glyphicon-ok"></i>
+                                            </span>
+                                        </a>
+                                    </li>*@
+                                </ul>
+                            </div>
+
+                            <form role="form">
+                                <div class="tab-content">
+
+                                    @*1st tab*@
+                                    <div class="tab-pane active" role="tabpanel" id="step1">
+                                        <div class="form-group clearfix">
+
+                                            <div class="col-md-12">
+                                                <label class="col-lg-2 control-label " for="userName2">Payment Ref No.<span class="text-danger"> *</span> </label>
+                                                <input class="required form-control" id="paymentReferenceNumber" name="assessmentNo" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-sm-12">
+                                            <ul class="list-inline pull-right">
+                                                <li><button type="button" id="SearchPaymentRefBtn" class="btn btn-primary">Search and continue</button></li>
+                                            </ul>
+                                        </div>
+                                      
+                                    </div>
+
+
+                                    <div class="tab-pane" role="tabpanel" id="step2">
+                                        <div class="form-group clearfix">
+
+                                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                                <p> <strong>Exception Info</strong></p>
+                                                @*<div class="table-responsive">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Bank</th>
+                        <th>Bank Branch</th>
+                        <th>Amount</th>
+                        <th>Revenue Code</th>
+                        <th>Revenue Name</th>
+                        <th>Agency Code</th>
+                        <th>Agency Name</th>
+                        <th>Payment Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td id="Name"></td>
+                        <td id="Bank"></td>
+                        <td id="Branch"></td>
+                        <td id="Amount"></td>
+                        <td id="RevenueCode"></td>
+                        <td id="RevenueName"></td>
+                        <td id="AgencyCode"></td>
+                        <td id="AgencyName"></td>
+                        <td id="PaymentDate"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>*@
+                                                <div id="seacrhByPaymentRefDiv"></div>
+                                                <br />
+                                                <br />
+                                            </div>
+                                           
+                                            <div class="col-md-12 col-sm-12+">
+                                                <label class="col-lg-2 control-label " for="userName2">Amount Available:</label>
+                                                <input class="required form-control" id="Balance" readonly type="text">
+                                                <br />
+                                            </div>
+                                          
+                                            <div class="col-md-12 col-sm-12+">
+                                                <label class="col-lg-2 control-label " for="userName2">Assessment Ref No. <span class="text-danger"> *</span> </label>
+                                                <input class="required form-control" id="assessmentNo" name="assessmentNo" type="text">
+                                            </div>
+                                            <br />
+
+                                        </div>
+                                        <div class="col-md-12 col-sm-12+">
+                                            <ul class="list-inline pull-right">
+                                                <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
+                                                <li><button type="button" class="btn btn-primary" id="searchAssessmentRefBtn">Continue</button></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    @*Step 3*@
+
+                                <div class="tab-pane" role="tabpanel" id="step3">
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <section>
+                                            <div class="form-group clearfix">
+                                                <label class="col-lg-2 control-label" for="name2"> Payer Name: </label>
+                                                <div class="col-lg-10">
+                                                    <label id="PayerName"></label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group clearfix">
+                                                <label class="col-lg-2 control-label" for="name2"> UTIN: </label>
+                                                <div class="col-lg-10">
+                                                    <label id="Utin"></label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group clearfix">
+                                                <label class="col-lg-2 control-label" for="name2"> Revenue Name: </label>
+                                                <div class="col-lg-10">
+                                                    <label id="RevenueNameAssessment"></label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group clearfix">
+                                                <label class="col-lg-2 control-label" for="name2"> Platform Name: </label>
+                                                <div class="col-lg-10">
+                                                    <label id="PlatformName"></label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group clearfix">
+                                                <label class="col-lg-2 control-label" for="name2"> Total Amount: </label>
+                                                <div class="col-lg-10">
+                                                    <label id="TotalAmount"></label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group clearfix">
+                                                <label class="col-lg-2 control-label" for="name2"> Available Amount: </label>
+                                                <div class="col-lg-10">
+                                                    <label id="AvailableAmount"></label>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <br />
+                                            <button class="btn btn-primary right" type="button" id="moreDetails">View More Assessment Details</button>
+                                            <br />
+                                            <br />
+                                        </section>
+                                    </div>
+                                  
+                                    <div class="col-md-12 col-sm-12+">
+                                        <label class="col-lg-2 control-label " for="userName2">Proposed Amount. <span class="text-danger"> *</span> </label>
+                                        <input class="required form-control" id="ProposedAmount" type="number" min="1">
+                                    </div>
+                                    <div class="col-md-12 col-sm-12+">
+                                        <label class="col-lg-2 control-label " for="userName2">Purpose / Reason. <span class="text-danger"> *</span> </label>
+                                        <textarea class="required form-control" id="Reason" type="text"></textarea>
+                                    </div>
+                                    <br />
+                                    <br />
+                                    <ul class="list-inline pull-right">
+                                        <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
+                                        <li><button type="button" id="btn_AddCreditNoteRequest" class="btn btn-primary btn-info-full ">Save and continue</button></li>
+                                    </ul>
+                                </div>
+                                    <div class="tab-pane" role="tabpanel" id="complete">
+                                        <h3>Complete</h3>
+                                        <p>You have successfully completed all steps.</p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- End panel-body -->
+        </div>
+        <!-- End panel -->
+
+    </div>
+    <!-- end col -->
+    <div id="cover-spin"></div>
+
+</div>
+
+@section Scripts{
+    <script src="~/appscripts/creditnote_automatic.js" asp-append-version="true"></script>
+}
+
+
+
+<!-- Wizard with Validation -->
+<!--<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Generate payment Assessment</h3>
+            </div>
+            <div class="panel-body">
+                <form id="wizard-validation-form" action="#">
+                    <div>
+                        <h3>Payment</h3>
+                        <section>
+                            <div class="form-group clearfix">
+                                <label class="col-lg-2 control-label " for="userName2">Payment Ref No. * </label>
+                                <div class="col-md-6">
+                                    <input class="required form-control" id="assessmentNo" name="assessmentNo" type="text">
+                                </div>
+                            </div>
+                        </section>
+                        <h3>Verify</h3>
+                        <section>
+                            <div class="form-group clearfix">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Name</th>
+                                                <th>Bank</th>
+                                                <th>Bank Branch</th>
+                                                <th>Revenue Code</th>
+                                                <th>Revenue Name</th>
+                                                <th>Agency Code</th>
+                                                <th>Agency Name</th>
+                                                <th>Payment Date</th>
+                                                <th>Tax Yeay</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Ismail</td>
+                                                <td>FCMB</td>
+                                                <td>Otto</td>
+                                                <td>4555</td>
+                                                <td>PAYE</td>
+                                                <td>1021</td>
+                                                <td>BIC</td>
+                                                <td>20/2/2021</td>
+                                                <td>2021</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <label class="col-lg-2 control-label " for="userName2">Assessment No. * </label>
+                                <div class="col-md-6">
+                                    <input class="required form-control" id="assessmentNo" name="assessmentNo" type="text">
+                                </div>
+                            </div>
+                        </section>
+                        <h3>Credit</h3>
+                        <section>
+                            <div class="form-group clearfix">
+                                <label class="col-lg-2 control-label" for="name2"> Payer Name: </label>
+                                <div class="col-lg-10">
+                                    <label>Abdulazeez Ismail</label>
+                                </div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <label class="col-lg-2 control-label" for="name2"> UTIN: </label>
+                                <div class="col-lg-10">
+                                    <label>747757575hb577555u</label>
+                                </div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <label class="col-lg-2 control-label" for="name2"> Tax Year: </label>
+                                <div class="col-lg-10">
+                                    <label>2021</label>
+                                </div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <label class="col-lg-2 control-label" for="name2"> Platform Name: </label>
+                                <div class="col-lg-10">
+                                    <label>Web</label>
+                                </div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <label class="col-lg-2 control-label" for="name2"> Amount Assessed: </label>
+                                <div class="col-lg-10">
+                                    <label>Abdulazeez Ismail</label>
+                                </div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <label class="col-lg-2 control-label" for="name2"> Proposed Amount: </label>
+                                <div class="col-lg-10">
+                                    <input id="name2" name="name" type="text" class="required form-control">
+                                </div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <label class="col-lg-2 control-label" for="name2"> Purpose / Reason </label>
+                                <div class="col-lg-10">
+                                    <input id="name2" name="name" type="text" class="required form-control">
+                                </div>
+                            </div>
+
+                        </section>
+                    </div>
+                </form>
+            </div>-->
+<!-- End panel-body -->
+<!--</div>-->
+<!-- End panel -->
+<!--</div>-->
+<!-- end col -->
+<!--</div>-->

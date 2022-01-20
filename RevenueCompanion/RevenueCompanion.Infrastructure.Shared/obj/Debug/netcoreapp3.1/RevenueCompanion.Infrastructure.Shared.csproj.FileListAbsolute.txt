@@ -1,0 +1,114 @@
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.deps.json
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.dll
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.pdb
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Application.dll
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Domain.dll
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.dll
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Persistence.dll
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Application.pdb
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.pdb
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Persistence.pdb
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Domain.pdb
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.csproj.AssemblyReference.cache
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.AssemblyInfoInputs.cache
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.AssemblyInfo.cs
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.csproj.CoreCompileInputs.cache
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.csproj.CopyComplete
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.dll
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.pdb
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.deps.json
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.dll
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.pdb
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Application.dll
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Domain.dll
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.dll
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Persistence.dll
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Application.pdb
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.pdb
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Persistence.pdb
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Domain.pdb
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.csproj.AssemblyReference.cache
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.AssemblyInfoInputs.cache
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.AssemblyInfo.cs
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.csproj.CoreCompileInputs.cache
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.csproj.CopyComplete
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.dll
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.pdb
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.deps.json
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.dll
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.pdb
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Application.dll
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Domain.dll
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.dll
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Persistence.dll
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Application.pdb
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.pdb
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Persistence.pdb
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Domain.pdb
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.csproj.AssemblyReference.cache
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.AssemblyInfoInputs.cache
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.AssemblyInfo.cs
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.csproj.CopyComplete
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.dll
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.pdb
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.deps.json
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.dll
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.pdb
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Application.dll
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Domain.dll
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.dll
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Persistence.dll
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Application.pdb
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.pdb
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Persistence.pdb
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Domain.pdb
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.csproj.AssemblyReference.cache
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.AssemblyInfoInputs.cache
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.AssemblyInfo.cs
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.csproj.CoreCompileInputs.cache
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.csproj.CopyComplete
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.dll
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.pdb
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.deps.json
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.dll
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.pdb
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Application.dll
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Domain.dll
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.dll
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Persistence.dll
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Application.pdb
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.pdb
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Persistence.pdb
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Domain.pdb
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.csproj.AssemblyReference.cache
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.AssemblyInfoInputs.cache
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.AssemblyInfo.cs
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.csproj.CoreCompileInputs.cache
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.csproj.CopyComplete
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.dll
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.pdb
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.deps.json
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.dll
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.pdb
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Application.dll
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Domain.dll
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.dll
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Persistence.dll
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Application.pdb
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.pdb
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Persistence.pdb
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Debug\netcoreapp3.1\RevenueCompanion.Domain.pdb
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.csproj.AssemblyReference.cache
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.AssemblyInfoInputs.cache
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.AssemblyInfo.cs
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.csproj.CoreCompileInputs.cache
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.csproj.CopyComplete
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.dll
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Debug\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.pdb

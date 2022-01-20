@@ -1,0 +1,254 @@
+﻿@page
+@model RevenueCompanion.Presentation.Pages.CreditNote.RequestDetailsModel
+@{
+    var rowIndex1 = 1;
+}
+
+
+<input asp-for="@Model.CreditNoteDetail.CreditNoteRequest.CreditNoteRequestId" id="creditNoteRequestId" type="hidden" />
+<div class="row">
+    <div id="approval" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content p-0 b-0">
+                <div class="panel panel-color panel-primary">
+                    <div class="panel-heading">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h3 class="panel-title">Panel Primary</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form" id="#">
+                            <div class="form-group">
+                                <label for="disapprovalReason">Proposed Amount</label>
+                                <textarea type="text" class="form-control" id="approvalReason" placeholder="Enter Reason for Approval"></textarea>
+                            </div>
+
+
+                            <button type="button" class="btn btn-purple" id="btn_approve">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+    <div id="disapproval" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content p-0 b-0">
+                <div class="panel panel-color panel-primary">
+                    <div class="panel-heading">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h3 class="panel-title">Please Enter Your Comment</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="panel-body">
+                            <form role="form" id="#">
+                                <div class="form-group">
+                                    <label for="disapprovalReason">Proposed Amount</label>
+                                    <textarea type="text" class="form-control" id="disapprovalReason" placeholder="Enter Reason for Disapproval"></textarea>
+                                </div>
+
+
+                                <button type="button" class="btn btn-purple" id="btn_disapprove">
+                                    Submit
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Credit Note Request Details
+
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="text-right">
+                                <a asp-page="/Approval/CreditNoteRequest" class="btn btn-warning waves-effect waves-light"><i class="mdi mdi-arrow-left-bold mr-2"></i>Go Back</a>
+                            </div>
+                            <br />
+                            <br />
+                            <dl class="row">
+
+                                <dt class="col-lg-3">
+                                    Payment Reference  Number
+                                </dt>
+                                <dd class="col-lg-9 ">
+                                    @(Model.CreditNoteDetail.CreditNoteRequest.PaymentReferenceNumber != "" ? Model.CreditNoteDetail.CreditNoteRequest.PaymentReferenceNumber : "N/A")
+                                </dd>
+                                <dt class="col-lg-3">
+                                    Assessment Reference Number
+                                </dt>
+                                <dd class="col-lg-9 ">
+                                    @Model.CreditNoteDetail.CreditNoteRequest.AssessmentReferenceNumber
+                                </dd>
+                                <dt class="col-lg-3">
+                                    Actual Amount
+                                </dt>
+                                <dd class="col-lg-9 ">
+                                    @Model.CreditNoteDetail.CreditNoteRequest.ActualAmount
+                                </dd>
+                                <dt class="col-lg-3">
+                                    Amount Used
+                                </dt>
+                                <dd class="col-lg-9 ">
+                                    @Model.CreditNoteDetail.CreditNoteRequest.AmountUsed
+                                </dd>
+                                <dt class="col-lg-3">
+                                    Requested By
+                                </dt>
+                                <dd class="col-lg-9 ">
+                                    @(Model.CreditNoteDetail.CreditNoteRequest.RequestedByName != null ? Model.CreditNoteDetail.CreditNoteRequest.RequestedByName : "Not Specified")
+                                </dd>
+                                <dt class="col-lg-3">
+                                    Requested On
+                                </dt>
+                                <dd class="col-lg-9 ">
+                                    @Model.CreditNoteDetail.CreditNoteRequest.DateRequested.ToString("dd/MM/yyyy hh:mm tt"))
+                                </dd>
+                                <dt class="col-lg-3">
+                                    Approval Needed ( <strong> @Model.CreditNoteDetail.CreditNoteRequest.NoOfRequiredApproval</strong>)
+                                </dt>
+                                <dd class="col-lg-9 ">
+                                    &nbsp; &nbsp; Approvals so far &nbsp; <strong> @Model.CreditNoteDetail.CreditNoteRequest.ApprovalCount</strong>
+                                </dd>
+                                <dt class="col-lg-3">
+                                    Status
+                                </dt>
+                                <dd class="col-lg-9">
+                                    @if (Model.CreditNoteDetail.CreditNoteRequest.IsApproved || Model.CreditNoteDetail.CreditNoteRequest.NoOfRequiredApproval == Model.CreditNoteDetail.CreditNoteRequest.ApprovalCount)
+                                    {
+                                        <span class="badge btn-success">Approved</span>
+                                    }
+                                    else if ((Model.CreditNoteDetail.CreditNoteRequest.ApprovalCount > 0) && (Model.CreditNoteDetail.CreditNoteRequest.ApprovalCount < Model.CreditNoteDetail.CreditNoteRequest.NoOfRequiredApproval))
+                                    {
+                                        <span class="badge btn-pink">In Process</span>
+                                    }
+                                    else if ((Model.CreditNoteDetail.CreditNoteRequest.ApprovalCount == 0) && (Model.CreditNoteDetail.CreditNoteRequest.NoOfRequiredApproval != Model.CreditNoteDetail.CreditNoteRequest.ApprovalCount))
+                                    {
+                                        <span class="badge btn-warning">Pending Approval</span>
+                                    }
+                                    else if (Model.CreditNoteDetail.CreditNoteRequest.IsApproved == false)
+                                    {
+
+                                        <span class="badge btn-danger">Declined</span>
+                                    }
+
+
+                                </dd>
+
+                                @if (Model.CreditNoteDetail.CreditNoteRequest.IsApproved || Model.CreditNoteDetail.CreditNoteRequest.NoOfRequiredApproval == Model.CreditNoteDetail.CreditNoteRequest.ApprovalCount)
+                                {
+                                    <dt class="col-lg-3">
+                                        Date Approved
+                                    </dt>
+                                    <dd class="col-lg-9">
+                                        @Model.CreditNoteDetail.CreditNoteRequest.DateApproved.ToString("dd/MM/yyyy hh:mm tt")
+                                    </dd>
+                                }
+
+                            </dl>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+
+                    <button class="btn btn-block btn-sm btn-success" data-toggle="modal" data-target="#approval">Approve</button>
+                </div>
+
+                <div class="col-md-4">
+                    <button class="btn btn-block btn-sm btn-danger" data-toggle="modal" data-target="#disapproval">Dis-approve</button>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="mt-0 header-title">Assessment Details</h4>
+
+                            <div class="table-responsive">
+                                <table id="datatable" class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>S/N</th>
+                                            <th>Payer Name</th>
+                                            <th>Payer Utin</th>
+                                            <th>Total Amount (#)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>@Model.CreditNoteDetail.SearchFromAssessmentDTO.PayerName</td>
+                                            <td>@Model.CreditNoteDetail.SearchFromAssessmentDTO.AgentUtin</td>
+                                            <td>@Model.CreditNoteDetail.SearchFromAssessmentDTO.TotalAmount</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="mt-0 header-title">Approval Details</h4>
+
+                            <div class="table-responsive">
+                                <table id="example" class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>S/N</th>
+                                            <th>Status</th>
+                                            <th>By</th>
+                                            <th>On</th>
+                                            <th>Comment</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.CreditNoteDetail.CreditNoteRequestApprovalDetails)
+                                        {
+                                            <tr>
+                                                <td>@(rowIndex1++)</td>
+                                                @if (item.IsApproved)
+                                                {
+                                                    <td><span class="badge btn-success">Approved</span></td>
+                                                }
+                                                else
+                                                {
+                                                    <td><span class="badge btn-warning">Dis-Approved</span></td>
+                                                }
+                                                <td>@item.ActedUponBy</td>
+                                                <td>@item.ActedUponOn.ToString("dd/MM/yyyy hh:mm tt")</td>
+                                                <td>@item.Comment</td>
+                                            </tr>
+                                        }
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="cover-spin"></div>
+</div>
+
+
+
+@section Scripts{
+    <script src="~/appscripts/creditnoteapprovalrequestdetails.js" asp-append-version="true"></script>
+}

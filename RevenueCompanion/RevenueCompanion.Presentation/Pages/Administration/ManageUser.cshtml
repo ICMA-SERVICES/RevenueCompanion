@@ -1,0 +1,87 @@
+﻿@page
+@model RevenueCompanion.Presentation.Pages.Administration.ManageUserModel
+@{
+    var selectedUserId = ViewData["selectedUserId"].ToString();
+    var roleId = ViewData["roleId"].ToString();
+    var userEmail = HttpContextAccessor.HttpContext.Session.GetString("userEmail");
+}
+<input type="hidden" id="selectedUserId" value="@selectedUserId" />
+<input type="hidden" id="roleId" value="@roleId" />
+<div class="page-title">
+    <h3 class="title">Users</h3>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div>
+                <a asp-page="/Administration/Users" class="btn btn-warning" style="float:right"><i class="fa-backward"></i>&nbsp;Go Back</a>
+            </div>
+            <div class="panel-heading">
+                <h3 class="panel-title">Manage Access Rights Of: @userEmail</h3>
+                <br />
+                <br />
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <h3 class="panel-title">Role Pages</h3>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <table @*id="datatable"*@ class="table table-bordered" id="table_pages_by_roleId">
+                                        <thead>
+                                            <tr>
+                                                <th>S/N</th>
+                                                <th>Menu Name</th>
+                                                <th>Action &nbsp;&nbsp; <input type="checkbox" id="rowPagesCheckAll" class="rolePagesOne" name="rolePagesOne" /></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="table_pages_by_roleId_body">
+                                        </tbody>
+                                    </table>
+                                    <div class="text-center">
+
+
+                                        <button class="btn  btn-primary m-t-n-xs" type="submit" id="btn-assignRowPages"><strong>Assign</strong></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <h3 class="panel-title">User Assigned Pages</h3>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <table class="table table-bordered" id="table_pages_by_userId">
+                                        <thead>
+                                            <tr>
+                                                <th>S/N</th>
+                                                <th>Menu Name</th>
+                                                <th>Action &nbsp;&nbsp; <input type="checkbox" id="userPagesCheckAll" class="userPagesOne" name="userPagesOne" /></th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody id="table_pages_by_userId_body">
+                                        </tbody>
+                                    </table>
+                                    <div class="text-center">
+
+
+                                        <button class="btn  btn-danger m-t-n-xs" type="submit" id="btn-removeAssignedPages"><strong>Remove Pages</strong></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script src="~/appscripts/manageuser.js" asp-append-version="true"></script>
+}

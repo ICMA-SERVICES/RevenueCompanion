@@ -1,0 +1,80 @@
+﻿@page
+@model RevenueCompanion.Presentation.Pages.Dashboard.UserModel
+@{
+}
+<div class="page-title">
+    <h3 class="title">Dashboard</h3>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="tile-stats white-bg">
+                    <div class="status">
+                        <h3 class="m-t-0 text-info" id="totalUser"><i class="fa fa-users"></i> @Model.TotalRequest</h3>
+                        <p>
+                            Total Credit Note Request
+                        </p>
+                        <p class="text-right">
+                            <a asp-page="/CreditNote/Request" title="View">
+                                <i class="fa fa-eye"></i>
+                            </a>
+                        </p>
+                    </div>
+                    @*<div class="chart-inline">
+                            <span id="dashboard1"></span>
+                        </div>*@
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="tile-stats white-bg">
+                    <div class="status">
+                        <h3 class="m-t-0 text-danger"><i class="fa fa-sun-o"></i> @Model.TotalApproved</h3>
+                        <p>
+                           Total Approved
+                        </p>
+                        <p class="text-right">
+                            <a asp-page="/CreditNote/Request" title="View">
+                                <i class="fa fa-eye"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-4">
+                <div class="tile-stats white-bg">
+                    <div class="status">
+                        <h3 class="m-t-0 text-danger"><i class="fa fa-sun-o"></i> @Model.TotalNotApproved</h3>
+                        <p>
+                            Total Not Approved
+                        </p>
+                        <p class="text-right">
+                            <a asp-page="/CreditNote/Request" title="View">
+                                <i class="fa fa-eye"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+           
+
+        </div>
+    </div>
+
+
+</div>
+
+@*<div class="row">
+    <div class="col-lg-12">
+
+        <div id="userDashboardGrid"></div>
+    </div>
+
+</div>*@
+
+@section Scripts{
+    <script src="~/appscripts/globaldashboard.js" asp-append-version="true"></script>
+}

@@ -1,0 +1,49 @@
+﻿@{
+    var color = HttpContextAccessor.HttpContext.Session.GetString("color");
+    var logo = HttpContextAccessor.HttpContext.Session.GetString("logo");
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <partial name="RevenueCompanionFiles/_Styles" />
+
+    <style>
+        .cr-styled input:checked + i {
+            border-color: @color;
+            color: @color;
+        }
+
+        body {
+            background-image: url(/img/bg.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100% !important;
+        }
+    </style>
+
+
+</head>
+
+
+<body>
+
+    <div class="wrapper-page animated fadeInDown">
+        <div class="panel panel-color panel-success">
+            <img class="text-center" src="~/img/@logo" width="80%">
+            <br /><br />
+            <div class="panel-heading" style="background-color:@color">
+                <h3 class="text-center m-t-10"> @ViewData["Action"] <br> <br> <strong>Revenue Companion</strong> </h3>
+            </div>
+
+            @RenderBody();
+
+        </div>
+    </div>
+
+    <partial name="RevenueCompanionFiles/_Scripts" />
+    @RenderSection("Scripts", required: false)
+
+</body>
+
+</html>

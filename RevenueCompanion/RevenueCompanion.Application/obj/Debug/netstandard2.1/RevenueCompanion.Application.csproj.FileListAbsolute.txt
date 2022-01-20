@@ -1,0 +1,78 @@
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Application.deps.json
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Application.dll
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Application.pdb
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Domain.dll
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Domain.pdb
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.csproj.AssemblyReference.cache
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.AssemblyInfoInputs.cache
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.AssemblyInfo.cs
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.csproj.CoreCompileInputs.cache
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.csproj.CopyComplete
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.dll
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.pdb
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Application.deps.json
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Application.dll
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Application.pdb
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Domain.dll
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Domain.pdb
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.csproj.AssemblyReference.cache
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.AssemblyInfoInputs.cache
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.AssemblyInfo.cs
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.csproj.CoreCompileInputs.cache
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.csproj.CopyComplete
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.dll
+C:\Users\USER2\source\repos\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.pdb
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Application.deps.json
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Application.dll
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Application.pdb
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Domain.dll
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Domain.pdb
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.csproj.AssemblyReference.cache
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.AssemblyInfoInputs.cache
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.AssemblyInfo.cs
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.csproj.CoreCompileInputs.cache
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.csproj.CopyComplete
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.dll
+C:\Users\Aikemefuna\OneDrive\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.pdb
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Application.deps.json
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Application.dll
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Application.pdb
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Domain.dll
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Domain.pdb
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.csproj.AssemblyReference.cache
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.AssemblyInfoInputs.cache
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.AssemblyInfo.cs
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.csproj.CoreCompileInputs.cache
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.csproj.CopyComplete
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.dll
+C:\Users\ikemefunaan\3D Objects\RevenueCompanionAnthony\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.pdb
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Application.deps.json
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Application.dll
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Application.pdb
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Domain.dll
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Domain.pdb
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.csproj.AssemblyReference.cache
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.AssemblyInfoInputs.cache
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.AssemblyInfo.cs
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.csproj.CoreCompileInputs.cache
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.csproj.CopyComplete
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.dll
+C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.pdb
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Application.deps.json
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Application.dll
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Application.pdb
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Domain.dll
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Debug\netstandard2.1\RevenueCompanion.Domain.pdb
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.csproj.AssemblyReference.cache
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.AssemblyInfoInputs.cache
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.AssemblyInfo.cs
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.csproj.CoreCompileInputs.cache
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.csproj.CopyComplete
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.dll
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Debug\netstandard2.1\RevenueCompanion.Application.pdb

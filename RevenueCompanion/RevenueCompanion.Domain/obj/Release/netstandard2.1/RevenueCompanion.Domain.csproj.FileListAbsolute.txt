@@ -1,0 +1,10 @@
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Domain\bin\Release\netstandard2.1\RevenueCompanion.Domain.deps.json
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Domain\bin\Release\netstandard2.1\RevenueCompanion.Domain.dll
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Domain\bin\Release\netstandard2.1\RevenueCompanion.Domain.pdb
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Domain\obj\Release\netstandard2.1\RevenueCompanion.Domain.csproj.AssemblyReference.cache
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Domain\obj\Release\netstandard2.1\RevenueCompanion.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Domain\obj\Release\netstandard2.1\RevenueCompanion.Domain.AssemblyInfoInputs.cache
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Domain\obj\Release\netstandard2.1\RevenueCompanion.Domain.AssemblyInfo.cs
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Domain\obj\Release\netstandard2.1\RevenueCompanion.Domain.csproj.CoreCompileInputs.cache
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Domain\obj\Release\netstandard2.1\RevenueCompanion.Domain.dll
+D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Domain\obj\Release\netstandard2.1\RevenueCompanion.Domain.pdb
