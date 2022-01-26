@@ -71,7 +71,7 @@
                                     Status
                                 </dt>
                                 <dd class="col-lg-9">
-                                    @if (Model.CreditNoteDetail.CreditNoteRequest.IsApproved || Model.CreditNoteDetail.CreditNoteRequest.NoOfRequiredApproval == Model.CreditNoteDetail.CreditNoteRequest.ApprovalCount)
+                                    @if (Model.CreditNoteDetail.CreditNoteRequest.IsApproved == true || Model.CreditNoteDetail.CreditNoteRequest.NoOfRequiredApproval == Model.CreditNoteDetail.CreditNoteRequest.ApprovalCount)
                                     {
                                         <span class="badge btn-success">Approved</span>
                                     }
@@ -92,7 +92,7 @@
 
                                 </dd>
 
-                                @if (Model.CreditNoteDetail.CreditNoteRequest.IsApproved || Model.CreditNoteDetail.CreditNoteRequest.NoOfRequiredApproval == Model.CreditNoteDetail.CreditNoteRequest.ApprovalCount)
+                                @if (Model.CreditNoteDetail.CreditNoteRequest.IsApproved == true || Model.CreditNoteDetail.CreditNoteRequest.NoOfRequiredApproval == Model.CreditNoteDetail.CreditNoteRequest.ApprovalCount)
                                 {
                                     <dt class="col-lg-3">
                                         Date Approved

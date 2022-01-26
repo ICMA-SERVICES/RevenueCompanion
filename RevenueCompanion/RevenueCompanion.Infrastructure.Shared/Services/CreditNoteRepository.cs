@@ -22,7 +22,8 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
         private readonly ILogger<CreditNoteRepository> _logger;
         private readonly IAuthenticatedUserService _authenticatedUser;
         private string constring;
-        IOptions<ConnectionStrings> myconnectionString;
+        private readonly IOptions<ConnectionStrings> myconnectionString;
+        private readonly IOptions<ExternalLinks> _processCreditNoteUrl;
         private readonly IDapper _dapper;
         private readonly ApplicationDbContext _context;
         private readonly IAuditRepository _auditRepository;
@@ -35,6 +36,7 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
         public CreditNoteRepository(ILogger<CreditNoteRepository> logger,
                                IAuthenticatedUserService authenticatedUser,
                                IOptions<ConnectionStrings> connectionString,
+                               IOptions<ExternalLinks> processCreditNoteUrl,
                                IDapper dapper,
                                ApplicationDbContext context,
                                IAuditRepository auditRepository,
@@ -47,6 +49,7 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
             _logger = logger;
             _authenticatedUser = authenticatedUser;
             myconnectionString = connectionString;
+            _processCreditNoteUrl = processCreditNoteUrl;
             _dapper = dapper;
             _context = context;
             _auditRepository = auditRepository;
@@ -85,7 +88,7 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
                     CreatedBy = _authenticatedUser.UserId,
                     CreatedOn = DateTime.Now,
                     DateRequested = request.DateRequested,
-                    IsApproved = false,
+                    IsApproved = null,
                     MerchantCode = _authenticatedUser.MerchantCode,
                     NoOfRequiredApproval = approvalSetting.NoOfRequiredApproval,
                     PaymentReferenceNumber = request.PaymentReferenceNumber,
@@ -193,7 +196,7 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
 
 
                             //Will be scheduled as background task.......
-                            // await PostToMrIsholaEndpoint(creditRequestId);
+                            await PostToMrIsholaEndpoint(creditRequestId);
                             //Post to Mr Ishola
                         }
                         return GetApprovalResponse(200, "Approved successfully.", true, true);
@@ -234,7 +237,7 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
                 requestedBy = _authenticatedUser.Email
             };
 
-            var result = await _httpClientHelperService.PostAsync<PostToExternalRepository>("", requestModel, "");
+            var result = await _httpClientHelperService.PostAsync<PostToExternalRepository>($"{_processCreditNoteUrl.Value.ProcessCreditNoteUrl}Revenue/processCreditNotesRequest", requestModel, "");
         }
 
         /// <summary>
@@ -250,7 +253,7 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
                 //retrive the credit note request by ID
                 var request = await GetCreditNoteRequestById(creditRequestId);
                 // If the approval count so far is greater or equal to the required approval, the item has been either approved or disapproved as the case may be
-                if (request.ApprovalCount >= request.NoOfRequiredApproval || request.IsApproved)
+                if (request.ApprovalCount >= request.NoOfRequiredApproval || request.IsApproved != true)
                 {
                     //approval request cannot be granted
                     return GetApprovalResponse(400, "Disapproval cannot be processed, The credit note request has completed its approval life cycle.", false, false);
@@ -479,7 +482,8 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
                     #region newly added by Anthony
 
 
-                    var collectionRevenueInfo = await _icmaCollectionContext.CollectionReports.FirstOrDefaultAsync(c => c.PaymentRefNumber == paymentRef && c.IsReversed == false && c.AssessmentNo == null);
+                    //var collectionRevenueInfo = await _icmaCollectionContext.CollectionReports.FirstOrDefaultAsync(c => c.PaymentRefNumber == paymentRef && c.IsReversed == false && c.AssessmentNo == null);
+                    var collectionRevenueInfo = await _icmaCollectionContext.CollectionReports.FirstOrDefaultAsync(c => c.PaymentRefNumber == paymentRef && c.IsReversed == false);
                     if (collectionRevenueInfo is null)
                     {
                         return GetResponse(404, "No record found for payment ref number specified", false);
@@ -487,10 +491,14 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
                     }
                     else
                     {
+                        if(collectionRevenueInfo.AssessmentNo != null)
+                        {
+                            return GetResponse(404, "This payment was made with assessment ref no.", false);
+                        }
                         if (collectionRevenueInfo.IsUsed != null)
                         {
                             var creditNoteRequestsForThePaymentRef = await _context.CreditNoteRequest.Where(c => c.PaymentReferenceNumber == paymentRef).ToListAsync();
-                            if (creditNoteRequestsForThePaymentRef.Any(c => c.IsApproved == false))
+                            if (creditNoteRequestsForThePaymentRef.Any(c => c.IsApproved == null))
                             {
                                 //failed because one or more items is awaiting approval
                                 return GetResponse(400, "One or more occurence of the payment ref no is awaiting approval, please contact the approving officer", false);

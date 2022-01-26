@@ -11,7 +11,7 @@ namespace RevenueCompanion.Application.DTOs.CreditNote
         public string PaymentReferenceNumber { get; set; }
         public string AssessmentReferenceNumber { get; set; }
         public DateTime DateRequested { get; set; }
-        public bool IsApproved { get; set; }
+        public bool? IsApproved { get; set; }
         public DateTime DateApproved { get; set; }
         public double ActualAmount { get; set; }
         public string RequestedBy { get; set; }

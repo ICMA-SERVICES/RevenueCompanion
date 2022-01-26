@@ -42,7 +42,7 @@ namespace RevenueCompanion.Presentation.Pages.Dashboard
             {
                 var creditNoteList = await GetCreditNoteListByUserId(loggedInUserId, jwtToken);
                 TotalRequest = creditNoteList.Count();
-                TotalApproved = creditNoteList.Where(c => c.IsApproved).Count();
+                TotalApproved = creditNoteList.Where(c => c.IsApproved == true).Count();
                 TotalNotApproved = creditNoteList.Where(c => c.IsApproved == false).Count();
             }
             else

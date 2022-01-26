@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using RevenueCompanion.Application.Interfaces;
 using RevenueCompanion.Application.Interfaces.Repositories;
+using RevenueCompanion.Domain.Common;
 using RevenueCompanion.Domain.Settings;
 using RevenueCompanion.Infrastructure.Shared.Services;
 
@@ -13,6 +14,7 @@ namespace RevenueCompanion.Infrastructure.Shared
         {
             services.Configure<MailSettings>(_config.GetSection("MailSettings"));
             services.Configure<MailMessageSettings>(_config.GetSection("MailMessageSettings"));
+            services.Configure<ExternalLinks>(_config.GetSection("ExternalLinks"));
             services.AddTransient<IDateTimeService, DateTimeService>();
             services.AddTransient<IEmailService, EmailService>();
             services.AddTransient<IAppRepository, AppRepository>();

@@ -6,7 +6,7 @@ $(document).ready(function () {
     var baseUrl = $('#ApiBaseUrl').val();
     var menuSetupId = $('#menuSetupId').val();
     var merchantCode = $('#merchantCode').val();
-    var amountAvailable
+    var amountAvailable, revenueName;
 
     $('#ProposedAmount').blur(function () {
 /*        alert($(this).val());*/
@@ -112,6 +112,7 @@ $(document).ready(function () {
                     let balance = response.data[0].balance;
                     document.getElementById('Balance').value = formatMoney(balance, "N");
                     amountAvailable = balance;
+                    revenueName = response.data[0].revenueName;
                     //document.getElementById('RevenueCode').innerHTML = response.data.revenueCode;
                     //document.getElementById('RevenueName').innerHTML = response.data.revenueName;
                     //document.getElementById('AgencyCode').innerHTML = response.data.agencyCode;
@@ -158,7 +159,23 @@ $(document).ready(function () {
             type: 'GET',
             dataType: 'json',
             success: function (response) {
+/*                console.log("response", response);*/
                 if (response.succeeded) {
+                    if (response.data.revenueName != revenueName) {
+                        swal({
+                            title: "This Payment cannot be used!",
+                            text: "Revenue Name for Payment does not match Revenue name for Assessment",
+                            icon: "warning",
+                            closeOnClickOutside: false,
+                            closeOnEsc: false
+                        })
+                            .then(() => {
+                                $('#searchAssessmentRefBtn').removeAttr('disabled');
+                            });
+                        $('#searchAssessmentRefBtn').removeAttr('disabled');
+                        return false
+                    }
+
                     document.getElementById('PayerName').innerHTML = response.data.payerName;
                     document.getElementById('PlatformName').innerHTML = response.data.platformcode;
                     document.getElementById('Utin').innerHTML = response.data.agentUtin;
@@ -169,10 +186,10 @@ $(document).ready(function () {
                     /* document.getElementById('TotalAmount').innerHTML = response.data.totalAmount;*/
 
 
-                    document.getElementById('AmountAccessedModal').innerHTML = response.data.amountAccessed;
+/*                    document.getElementById('AmountAccessedModal').innerHTML = response.data.amountAccessed;*/
                     document.getElementById('RevenueNameModal').innerHTML = response.data.revenueName;
-                    document.getElementById('TotalAmountModal').innerHTML = response.data.totalAmount;
-                    document.getElementById('AmountPaidModal').innerHTML = response.data.amountPaid;
+                    document.getElementById('TotalAmountModal').innerHTML = formatMoney(response.data.totalAmount, "N");
+                    document.getElementById('AmountPaidModal').innerHTML = formatMoney(response.data.amountPaid, "N");
                     document.getElementById('RevenueCode').innerHTML = response.data.revenueCode;
                     document.getElementById('AgencyName').innerHTML = response.data.agencyName;
                     /*document.getElementById('AgencyCode').innerHTML = response.data.agencyCode;*/

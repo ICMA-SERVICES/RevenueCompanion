@@ -15,7 +15,7 @@ namespace RevenueCompanion.Domain.Entities
         public string RequestedByEmail { get; set; }
         public string RequestedById { get; set; }
         public DateTime DateRequested { get; set; }
-        public bool IsApproved { get; set; }
+        public bool? IsApproved { get; set; } = null;
         public DateTime DateApproved { get; set; }
         public double ActualAmount { get; set; }
         public double AmountUsed { get; set; }
