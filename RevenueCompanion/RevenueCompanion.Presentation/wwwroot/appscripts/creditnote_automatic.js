@@ -6,7 +6,8 @@ $(document).ready(function () {
     var baseUrl = $('#ApiBaseUrl').val();
     var menuSetupId = $('#menuSetupId').val();
     var merchantCode = $('#merchantCode').val();
-    var amountAvailable, revenueName;
+    var amountAvailable;
+    var revenueName;
 
     $('#ProposedAmount').blur(function () {
 /*        alert($(this).val());*/
@@ -227,9 +228,9 @@ $(document).ready(function () {
             MenuSetupId: parseInt(menuSetupId),
             PaymentReferenceNumber: $('#paymentReferenceNumber').val(),
             AssessmentReferenceNumber: $('#assessmentNo').val(),
-            ActualAmount: parseFloat(document.getElementById("TotalAmountModal").innerHTML),
+            ActualAmount: parseFloat(amountAvailable),
             AmountUsed: parseFloat($('#ProposedAmount').val()),
-            Balance: parseFloat(amountAvailable),
+            Balance: parseFloat(amountAvailable - $('#ProposedAmount').val()),
             MerchantCode: merchantCode,
             TransType: "1"
         };

@@ -495,8 +495,6 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
                         {
                             return GetResponse(404, "This payment was made with assessment ref no.", false);
                         }
-                        if (collectionRevenueInfo.IsUsed != null)
-                        {
                             var creditNoteRequestsForThePaymentRef = await _context.CreditNoteRequest.Where(c => c.PaymentReferenceNumber == paymentRef).ToListAsync();
                             if (creditNoteRequestsForThePaymentRef.Any(c => c.IsApproved == null))
                             {
@@ -505,7 +503,35 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
                             }
                             else
                             {
-                                if (collectionRevenueInfo.Amount > creditNoteRequestsForThePaymentRef.Sum(c => c.AmountUsed))
+                                if (collectionRevenueInfo.IsUsed != null)
+                                {
+                                    if (collectionRevenueInfo.Amount > creditNoteRequestsForThePaymentRef.Sum(c => c.AmountUsed))
+                                    {
+                                        return GetResponse(200, "Record found", true, new SearchFromReconciliationDTO
+                                        {
+                                            AgencyCode = collectionRevenueInfo.AgencyCode,
+                                            RevenueName = collectionRevenueInfo.RevenueName,
+                                            BankName = collectionRevenueInfo.BankName,
+                                            Branchname = collectionRevenueInfo.BranchName,
+                                            RevenueCode = collectionRevenueInfo.RevenueCode,
+                                            Payername = collectionRevenueInfo.PayerName,
+                                            PaymentDate = collectionRevenueInfo.PaymentDate,
+                                            PaymentRefNumber = collectionRevenueInfo.PaymentRefNumber,
+                                            Amount = collectionRevenueInfo.Amount,
+                                            Balance = collectionRevenueInfo.Amount - creditNoteRequestsForThePaymentRef.Sum(c => c.AmountUsed),
+                                            AgencyName = collectionRevenueInfo.AgencyName,
+                                            BankCode = collectionRevenueInfo.BankCode,
+                                            Branchcode = collectionRevenueInfo.BranchCode,
+                                            Channel = collectionRevenueInfo.ChannelCode,
+                                            UsedByPlatform = collectionRevenueInfo.IsUsed.ToString(),
+                                        });
+                                    }
+                                    else
+                                    {
+                                        return GetResponse(400, "This record has been fully utilized", false);
+                                    }
+                                }
+                                else
                                 {
                                     return GetResponse(200, "Record found", true, new SearchFromReconciliationDTO
                                     {
@@ -518,42 +544,16 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
                                         PaymentDate = collectionRevenueInfo.PaymentDate,
                                         PaymentRefNumber = collectionRevenueInfo.PaymentRefNumber,
                                         Amount = collectionRevenueInfo.Amount,
-                                        Balance = collectionRevenueInfo.Amount - creditNoteRequestsForThePaymentRef.Sum(c => c.AmountUsed),
                                         AgencyName = collectionRevenueInfo.AgencyName,
                                         BankCode = collectionRevenueInfo.BankCode,
-                                        Branchcode = collectionRevenueInfo.BranchCode,
+                                        Branchcode = collectionRevenueInfo.BranchName,
                                         Channel = collectionRevenueInfo.ChannelCode,
                                         UsedByPlatform = collectionRevenueInfo.IsUsed.ToString(),
+                                        Balance = collectionRevenueInfo.Amount
                                     });
-                                }
-                                else
-                                {
-                                    return GetResponse(400, "This record has been fully utilized", false);
+
                                 }
                             }
-                        }
-                        else
-                        {
-                            return GetResponse(200, "Record found", true, new SearchFromReconciliationDTO
-                            {
-                                AgencyCode = collectionRevenueInfo.AgencyCode,
-                                RevenueName = collectionRevenueInfo.RevenueName,
-                                BankName = collectionRevenueInfo.BankName,
-                                Branchname = collectionRevenueInfo.BranchName,
-                                RevenueCode = collectionRevenueInfo.RevenueCode,
-                                Payername = collectionRevenueInfo.PayerName,
-                                PaymentDate = collectionRevenueInfo.PaymentDate,
-                                PaymentRefNumber = collectionRevenueInfo.PaymentRefNumber,
-                                Amount = collectionRevenueInfo.Amount,
-                                AgencyName = collectionRevenueInfo.AgencyName,
-                                BankCode = collectionRevenueInfo.BankCode,
-                                Branchcode = collectionRevenueInfo.BranchName,
-                                Channel = collectionRevenueInfo.ChannelCode,
-                                UsedByPlatform = collectionRevenueInfo.IsUsed.ToString(),
-                                Balance = collectionRevenueInfo.Amount
-                            });
-
-                        }
                     }
                     #endregion
                 }

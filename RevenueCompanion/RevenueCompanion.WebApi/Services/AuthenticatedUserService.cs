@@ -11,7 +11,7 @@ namespace RevenueCompanion.WebApi.Services
             UserId = httpContextAccessor.HttpContext?.User?.FindFirstValue("uid");
             MerchantCode = httpContextAccessor.HttpContext?.User?.FindFirstValue("mcode");
             Email = httpContextAccessor.HttpContext?.User?.FindFirstValue("given_email");
-            Name = httpContextAccessor.HttpContext?.User?.FindFirstValue("given_name");
+            Name = httpContextAccessor.HttpContext?.User?.FindFirstValue("name");
         }
 
         public string UserId { get; }

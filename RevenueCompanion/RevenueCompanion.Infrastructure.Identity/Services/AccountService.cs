@@ -195,7 +195,7 @@ namespace RevenueCompanion.Infrastructure.Identity.Services
                 new Claim("uid", user.Id),
                 new Claim("email", user.Email),
                 new Claim("mcode", user.MerchantCode),
-                new Claim("given_name", user.FirstName),
+                new Claim("name", $"{user.FirstName} {user.LastName}"),
                 new Claim("given_email", user.Email),
                 new Claim("ip", ipAddress)
             }
