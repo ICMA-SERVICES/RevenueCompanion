@@ -17,3 +17,22 @@ D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infras
 D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.csproj.CopyComplete
 D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.dll
 D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.pdb
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.deps.json
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.dll
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.pdb
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Release\netcoreapp3.1\RevenueCompanion.Application.dll
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Release\netcoreapp3.1\RevenueCompanion.Domain.dll
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.dll
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Persistence.dll
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Release\netcoreapp3.1\RevenueCompanion.Application.pdb
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.pdb
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Persistence.pdb
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\bin\Release\netcoreapp3.1\RevenueCompanion.Domain.pdb
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.csproj.AssemblyReference.cache
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.AssemblyInfoInputs.cache
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.AssemblyInfo.cs
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.csproj.CoreCompileInputs.cache
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.csproj.CopyComplete
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.dll
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Shared\obj\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Shared.pdb

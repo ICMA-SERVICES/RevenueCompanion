@@ -11,3 +11,16 @@ D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Applic
 D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Release\netstandard2.1\RevenueCompanion.Application.csproj.CopyComplete
 D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Release\netstandard2.1\RevenueCompanion.Application.dll
 D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Release\netstandard2.1\RevenueCompanion.Application.pdb
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Release\netstandard2.1\RevenueCompanion.Application.deps.json
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Release\netstandard2.1\RevenueCompanion.Application.dll
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Release\netstandard2.1\RevenueCompanion.Application.pdb
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Release\netstandard2.1\RevenueCompanion.Domain.dll
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\bin\Release\netstandard2.1\RevenueCompanion.Domain.pdb
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Release\netstandard2.1\RevenueCompanion.Application.csproj.AssemblyReference.cache
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Release\netstandard2.1\RevenueCompanion.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Release\netstandard2.1\RevenueCompanion.Application.AssemblyInfoInputs.cache
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Release\netstandard2.1\RevenueCompanion.Application.AssemblyInfo.cs
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Release\netstandard2.1\RevenueCompanion.Application.csproj.CoreCompileInputs.cache
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Release\netstandard2.1\RevenueCompanion.Application.csproj.CopyComplete
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Release\netstandard2.1\RevenueCompanion.Application.dll
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Application\obj\Release\netstandard2.1\RevenueCompanion.Application.pdb

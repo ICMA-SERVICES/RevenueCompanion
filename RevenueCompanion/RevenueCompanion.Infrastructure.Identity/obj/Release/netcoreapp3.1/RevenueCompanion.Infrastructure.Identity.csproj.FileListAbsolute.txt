@@ -18,3 +18,23 @@ D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infras
 D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Identity\obj\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.dll
 D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Identity\obj\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.pdb
 D:\ICMA Projects Clean\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Identity\obj\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.genruntimeconfig.cache
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Identity\bin\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.deps.json
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Identity\bin\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.runtimeconfig.json
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Identity\bin\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.runtimeconfig.dev.json
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Identity\bin\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.dll
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Identity\bin\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.pdb
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Identity\bin\Release\netcoreapp3.1\RevenueCompanion.Application.dll
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Identity\bin\Release\netcoreapp3.1\RevenueCompanion.Domain.dll
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Identity\bin\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Persistence.dll
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Identity\bin\Release\netcoreapp3.1\RevenueCompanion.Application.pdb
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Identity\bin\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Persistence.pdb
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Identity\bin\Release\netcoreapp3.1\RevenueCompanion.Domain.pdb
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Identity\obj\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.csproj.AssemblyReference.cache
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Identity\obj\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Identity\obj\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.AssemblyInfoInputs.cache
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Identity\obj\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.AssemblyInfo.cs
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Identity\obj\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.csproj.CoreCompileInputs.cache
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Identity\obj\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.csproj.CopyComplete
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Identity\obj\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.dll
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Identity\obj\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.pdb
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Infrastructure.Identity\obj\Release\netcoreapp3.1\RevenueCompanion.Infrastructure.Identity.genruntimeconfig.cache

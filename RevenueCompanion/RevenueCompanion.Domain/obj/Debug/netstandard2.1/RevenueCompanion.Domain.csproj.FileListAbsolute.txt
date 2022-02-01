@@ -51,6 +51,7 @@ C:\Users\USER2\Desktop\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanio
 D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Domain\bin\Debug\netstandard2.1\RevenueCompanion.Domain.deps.json
 D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Domain\bin\Debug\netstandard2.1\RevenueCompanion.Domain.dll
 D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Domain\bin\Debug\netstandard2.1\RevenueCompanion.Domain.pdb
+D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Domain\obj\Debug\netstandard2.1\RevenueCompanion.Domain.csproj.AssemblyReference.cache
 D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Domain\obj\Debug\netstandard2.1\RevenueCompanion.Domain.GeneratedMSBuildEditorConfig.editorconfig
 D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Domain\obj\Debug\netstandard2.1\RevenueCompanion.Domain.AssemblyInfoInputs.cache
 D:\Dev\C#\source\repos\Revenue\RevenueCompanion\RevenueCompanion\RevenueCompanion.Domain\obj\Debug\netstandard2.1\RevenueCompanion.Domain.AssemblyInfo.cs
