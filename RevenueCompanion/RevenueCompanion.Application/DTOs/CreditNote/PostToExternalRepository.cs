@@ -20,5 +20,7 @@
         public string revenueName { get; set; }
         public string agencyCode { get; set; }
         public string agencyName { get; set; }
+        public string SecretKey { get; set; }
+        public string MerchantCode { get; set; }
     }
 }

@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.Extensions.Configuration;
 using RevenueCompanion.Application.DapperServices;
 using RevenueCompanion.Application.DTOs.CreditNote;
 using RevenueCompanion.Application.Interfaces;
@@ -32,6 +33,7 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IHttpClientHelperService _httpClientHelperService;
         private readonly IcmaCollectionContext _icmaCollectionContext;
+        public IConfiguration _config { get; }
 
         public CreditNoteRepository(ILogger<CreditNoteRepository> logger,
                                IAuthenticatedUserService authenticatedUser,
@@ -44,7 +46,8 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
                                IReconcileContext reconcileContext,
                                UserManager<ApplicationUser> userManager,
                                IHttpClientHelperService httpClientHelperService,
-                               IcmaCollectionContext icmaCollectionContext)
+                               IcmaCollectionContext icmaCollectionContext,
+                               IConfiguration configuration)
         {
             _logger = logger;
             _authenticatedUser = authenticatedUser;
@@ -59,6 +62,7 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
             _httpClientHelperService = httpClientHelperService;
             _icmaCollectionContext = icmaCollectionContext;
             constring = myconnectionString.Value.DefaultConnection;
+            _config = configuration;
         }
         /// <summary>
         /// Create new Credit Note Request
@@ -196,7 +200,7 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
 
 
                             //Will be scheduled as background task.......
-                            await PostToMrIsholaEndpoint(creditRequestId);
+                            await PostToMrIsholaEndpoint(creditRequestId, comment);
                             //Post to Mr Ishola
                         }
                         return GetApprovalResponse(200, "Approved successfully.", true, true);
@@ -212,7 +216,7 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
             }
         }
 
-        private async Task PostToMrIsholaEndpoint(int creditRequestId)
+        private async Task PostToMrIsholaEndpoint(int creditRequestId, string Comment)
         {
             //retrive the credit note from database
             var creditNote = await _context.CreditNoteRequest.FirstOrDefaultAsync(c => c.CreditNoteRequestId == creditRequestId);
@@ -234,10 +238,22 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
                 proposedAmount = Convert.ToInt32(creditNote.AmountUsed),
                 revenueCode = assessment.RevenueCode,
                 revenueName = assessment.RevenueName,
-                requestedBy = _authenticatedUser.Email
+                platFormName = assessment.Platformcode,
+                year = assessment.TaxYear,
+                reason = Comment,
+                appId = Int32.Parse(_config.GetSection("UserSettings")["AppId"]),
+                SecretKey = _config.GetSection("UserSettings")["SecretKey"],
+                MerchantCode = _config.GetSection("UserSettings")["MerchantCode"],
+                sourceId = creditNote.CreditNoteRequestTypeId,
+                source = creditNote.CreditNoteRequestTypeId == 1 ? "Automatic" : "Manual",
+                requestedBy = _authenticatedUser.Email,
+                approvedBy = _authenticatedUser.Email,
             };
 
-            var result = await _httpClientHelperService.PostAsync<PostToExternalRepository>($"{_processCreditNoteUrl.Value.ProcessCreditNoteUrl}Revenue/processCreditNotesRequest", requestModel, "");
+            var SecretKey = _config.GetSection("UserSettings")["SecretKey"];
+            var MerchantCode = _config.GetSection("UserSettings")["MerchantCode"];
+
+            var result = await _httpClientHelperService.PostAsync<PostToExternalRepository>($"{_processCreditNoteUrl.Value.ProcessCreditNoteUrl}Revenue/processCreditNotesRequest", requestModel, "", SecretKey, MerchantCode);
         }
 
         /// <summary>

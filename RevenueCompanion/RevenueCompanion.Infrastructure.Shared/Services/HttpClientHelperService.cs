@@ -54,7 +54,7 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
         }
 
 
-        public async Task<T> PostAsync<T>(string uri, T data, string authToken = "")
+        public async Task<T> PostAsync<T>(string uri, T data, string authToken = "", string SecretKey = "", string MerchantCode = "")
         {
             try
             {
@@ -62,6 +62,12 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
 
                 var content = new StringContent(JsonConvert.SerializeObject(data));
                 content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+
+                if (!String.IsNullOrEmpty(SecretKey) && !String.IsNullOrEmpty(MerchantCode))
+                {
+                    content.Headers.Add("SecretKey", SecretKey);
+                    content.Headers.Add("MerchantCode", MerchantCode);
+                }
 
                 string jsonResult = string.Empty;
 

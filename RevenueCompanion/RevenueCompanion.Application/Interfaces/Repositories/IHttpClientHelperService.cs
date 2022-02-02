@@ -36,7 +36,7 @@ namespace RevenueCompanion.Application.Interfaces.Repositories
         /// <param name="merchantCode"></param>
         /// <param name="authToken"></param>
         /// <returns></returns>
-        Task<T> PostAsync<T>(string uri, T data, string authToken = "");
+        Task<T> PostAsync<T>(string uri, T data, string authToken = "", string SecretKey = "", string MerchantCode = "");
         /// <summary>
         /// Http client handler - Put. Specifiy the base data
         /// </summary>
