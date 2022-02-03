@@ -5,6 +5,7 @@ $(document).ready(function () {
     var baseUrl = $('#ApiBaseUrl').val();
     var menuSetupId = $('#menuSetupId').val();
     var merchantCode = $('#merchantCode').val();
+    var amountAvailable;
 
     $('#actionLoader').hide();
     var that = this;
@@ -14,9 +15,15 @@ $(document).ready(function () {
 
 
     $('#btn_AddCreditNoteRequest').on('click', function () {
+        let proposedAmount = document.getElementById("ProposedAmount").value;
+        if (proposedAmount > parseFloat(amountAvailable)) {
+            swal("Proposed amount can not be greater than total amount")
+            document.getElementById("ProposedAmount").value = 0;
+            return false;
+        }
+
         $('#btn_AddCreditNoteRequest').attr('disabled', 'disabled');
         //let reason = document.getElementById("Reason").value;
-        let proposedAmount = document.getElementById("ProposedAmount").value;
 
         //if (reason == "" || reason == null) {
         //    $('#Reason').css('border-color', 'Red');
@@ -40,6 +47,13 @@ $(document).ready(function () {
 
     });
 
+    $('#ProposedAmount').blur(function () {
+        /*        alert($(this).val());*/
+        if (parseFloat($(this).val()) > parseFloat(amountAvailable)) {
+            swal("Proposed amount can not be greater than total amount")
+            $(this).val(0);
+        }
+    })
 
 
   
@@ -72,6 +86,7 @@ $(document).ready(function () {
             dataType: 'json',
             success: function (response) {
                 if (response.succeeded) {
+                    amountAvailable = response.data.totalAmount;
                     document.getElementById('PayerName').innerHTML = response.data.payerName;
                     document.getElementById('PlatformName').innerHTML = response.data.platformcode;
                     document.getElementById('Utin').innerHTML = response.data.agentUtin;
@@ -79,8 +94,8 @@ $(document).ready(function () {
 
                     document.getElementById('AmountAccessed').innerHTML = response.data.amountAccessed;
                     document.getElementById('RevenueName').innerHTML = response.data.revenueName;
-                    document.getElementById('TotalAmount').innerHTML = response.data.totalAmount;
-                    document.getElementById('AmountPaid').innerHTML = response.data.amountPaid;
+                    document.getElementById('TotalAmount').innerHTML = formatMoney(response.data.totalAmount, "N");
+                    document.getElementById('AmountPaid').innerHTML = formatMoney(response.data.amountPaid, "N");
                     document.getElementById('RevenueCode').innerHTML = response.data.revenueCode;
                     document.getElementById('AgencyName').innerHTML = response.data.agencyName;
                     document.getElementById('TaxYear').innerHTML = response.data.taxYear;

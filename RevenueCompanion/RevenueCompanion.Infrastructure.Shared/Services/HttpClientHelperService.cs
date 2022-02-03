@@ -54,7 +54,7 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
         }
 
 
-        public async Task<T> PostAsync<T>(string uri, T data, string authToken = "", string SecretKey = "", string MerchantCode = "")
+        public async Task<T> PostAsync<T>(string uri, T data, string authToken = "")
         {
             try
             {
@@ -62,12 +62,6 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
 
                 var content = new StringContent(JsonConvert.SerializeObject(data));
                 content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-
-                if (!String.IsNullOrEmpty(SecretKey) && !String.IsNullOrEmpty(MerchantCode))
-                {
-                    content.Headers.Add("SecretKey", SecretKey);
-                    content.Headers.Add("MerchantCode", MerchantCode);
-                }
 
                 string jsonResult = string.Empty;
 
@@ -107,16 +101,20 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
             }
         }
 
-        public async Task<TR> PostAsync<T, TR>(string uri, T data, string authToken = "")
+        public async Task<TR> PostAsync<T, TR>(string uri, T data, string authToken = "", string SecretKey = "", string MerchantCode = "")
         {
             try
             {
-
-
                 HttpClient httpClient = CreateHttpClient(authToken);
 
                 var content = new StringContent(JsonConvert.SerializeObject(data));
                 content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+
+                if (!String.IsNullOrEmpty(SecretKey) && !String.IsNullOrEmpty(MerchantCode))
+                {
+                    content.Headers.Add("SecretKey", SecretKey);
+                    content.Headers.Add("MerchantCode", MerchantCode);
+                }
 
                 string jsonResult = string.Empty;
 
