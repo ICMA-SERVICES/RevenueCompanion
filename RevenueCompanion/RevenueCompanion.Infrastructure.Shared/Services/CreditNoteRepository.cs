@@ -191,13 +191,17 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
                         await _context.CreditNoteRequestApprovalDetails.AddAsync(approverDetails);
                         await _context.SaveChangesAsync();
 
-                        var collectionReport = await _icmaCollectionContext.CollectionReports.FirstOrDefaultAsync(c => c.PaymentRefNumber == request.PaymentReferenceNumber);
-                        collectionReport.UsedByPlatform = assessment.Platformcode;
-                        collectionReport.Balance = collectionReport.Balance - (decimal)(creditNote.AmountUsed);
-                        collectionReport.PayerUtin = assessment.AgentUtin;
-                        collectionReport.PlatformCode = assessment.Platformcode;
-                        collectionReport.IsPushedToPlatformOwner = true;
-                        _icmaCollectionContext.CollectionReports.Update(collectionReport);
+                        if(request.CreditNoteRequestTypeId == 1)
+                        {
+                            var collectionReport = await _icmaCollectionContext.CollectionReports.FirstOrDefaultAsync(c => c.PaymentRefNumber == request.PaymentReferenceNumber);
+                            collectionReport.UsedByPlatform = assessment.Platformcode;
+                            collectionReport.Balance = collectionReport.Balance - (decimal)(creditNote.AmountUsed);
+                            collectionReport.PayerUtin = assessment.AgentUtin;
+                            collectionReport.PlatformCode = assessment.Platformcode;
+                            collectionReport.IsPushedToPlatformOwner = true;
+                            //_icmaCollectionContext.CollectionReports.Update(collectionReport);
+                            var updater = await _icmaCollectionContext.SaveChangesAsync();
+                        }
 
 
                         //Create audit
@@ -221,12 +225,12 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
                             }
                             return GetApprovalResponse(200, "Approved successfully.", true, true);
                         }
-                        return GetApprovalResponse(400, "An error occured while processing your request, contact the adminstrator.", false, false);
+                        return GetApprovalResponse(400, "An error occured while processing your request, please try again.", false, false);
 
                     }
                     else
                     {
-                        return GetApprovalResponse(400, "An error occured while processing your request, please try again.", false, false);
+                        return GetApprovalResponse(400, "An error occured while processing your request, contact the adminstrator.", false, false);
                     }
                 }
             }

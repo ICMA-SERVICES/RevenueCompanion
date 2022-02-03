@@ -48,7 +48,6 @@ $(document).ready(function () {
     });
 
     $('#ProposedAmount').blur(function () {
-        /*        alert($(this).val());*/
         if (parseFloat($(this).val()) > parseFloat(amountAvailable)) {
             swal("Proposed amount can not be greater than total amount")
             $(this).val(0);
@@ -92,7 +91,6 @@ $(document).ready(function () {
                     document.getElementById('Utin').innerHTML = response.data.agentUtin;
 
 
-                    document.getElementById('AmountAccessed').innerHTML = response.data.amountAccessed;
                     document.getElementById('RevenueName').innerHTML = response.data.revenueName;
                     document.getElementById('TotalAmount').innerHTML = formatMoney(response.data.totalAmount, "N");
                     document.getElementById('AmountPaid').innerHTML = formatMoney(response.data.amountPaid, "N");
@@ -132,7 +130,7 @@ $(document).ready(function () {
             MenuSetupId: parseInt(menuSetupId),
             PaymentReferenceNumber: "",
             AssessmentReferenceNumber: $('#assessmentNo').val(),
-            ActualAmount: parseFloat(document.getElementById("TotalAmount").innerHTML),
+            ActualAmount: 0,
             AmountUsed: parseFloat($('#ProposedAmount').val()),
             Balance: 0,
             MerchantCode: merchantCode,
