@@ -12,6 +12,7 @@ namespace RevenueCompanion.Application.Interfaces
         Task<Response<string>> ConfirmEmailAsync(string userId, string code, string password);
         Task<Response<string>> ForgotPassword(ForgotPasswordRequest model);
         Task<Response<string>> ResetPassword(ResetPasswordRequest model);
+        Task<Response<string>> ChangePassword(ChangePasswordRequest model);
         Task<Response<string>> Logout();
         Task<int> ResendEmail(string email, string webUrl);
         Task<int> GetUserCount(string loggedInUserId);

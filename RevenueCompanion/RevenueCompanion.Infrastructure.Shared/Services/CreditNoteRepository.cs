@@ -568,7 +568,7 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
                                             PaymentDate = collectionRevenueInfo.PaymentDate,
                                             PaymentRefNumber = collectionRevenueInfo.PaymentRefNumber,
                                             Amount = collectionRevenueInfo.Amount,
-                                            Balance = collectionRevenueInfo.Amount - creditNoteRequestsForThePaymentRef.Sum(c => c.AmountUsed),
+                                            Balance = Convert.ToDouble(collectionRevenueInfo.Balance),
                                             AgencyName = collectionRevenueInfo.AgencyName,
                                             BankCode = collectionRevenueInfo.BankCode,
                                             Branchcode = collectionRevenueInfo.BranchCode,

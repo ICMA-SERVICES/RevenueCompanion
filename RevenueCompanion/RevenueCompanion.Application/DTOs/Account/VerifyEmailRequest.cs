@@ -20,4 +20,18 @@ namespace RevenueCompanion.Application.DTOs.Account
         [Compare("Password")]
         public string ConfirmPassword { get; set; }
     }
+
+
+    public class ChangePasswordRequest
+    {
+        [Required]
+        public string OldPassword { get; set; }
+
+        [Required]
+        public string NewPassword { get; set; }
+
+        [Required]        
+        [Compare("NewPassword")]
+        public string ConfirmPassword { get; set; }
+    }
 }

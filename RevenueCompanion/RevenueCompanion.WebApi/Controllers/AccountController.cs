@@ -56,6 +56,14 @@ namespace RevenueCompanion.WebApi.Controllers
 
             return Ok(await _accountService.ResetPassword(model));
         }
+        
+        [Authorize]
+        [HttpPost("change-password")]
+        public async Task<IActionResult> ChangePassword(ChangePasswordRequest model)
+        {
+
+            return Ok(await _accountService.ChangePassword(model));
+        }
         [HttpGet("logout")]
         public async Task<IActionResult> LogoutAsync()
         {

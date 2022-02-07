@@ -385,6 +385,15 @@ $(document).ready(function () {
 
                     },
                     {
+                        dataField: "balance",
+                        caption: "Balance",
+                        sortIndex: 0,
+                        sortOrder: 'asc',
+                        //fixed: true,
+                        cssClass: 'font-bold'
+
+                    },
+                    {
                         dataField: "amount",
                         caption: "Amount",
                         sortIndex: 0,

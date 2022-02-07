@@ -548,6 +548,32 @@ namespace RevenueCompanion.Infrastructure.Identity.Services
             var userCount = await GetUsers(loggedInUserId);
             return userCount.Count();
         }
+
+        public async Task<Response<string>> ChangePassword(ChangePasswordRequest model)
+        {
+            try
+            {
+                var user = await _userManager.FindByEmailAsync(_authenticatedUserService.Email);
+                var checkexistingpassword = await _userManager.CheckPasswordAsync(user, model.OldPassword);
+                if (checkexistingpassword)
+                {
+                    var changepw = await _userManager.ChangePasswordAsync(user, model.OldPassword, model.NewPassword);
+                    if (changepw.Succeeded)
+                    {
+                        return new Response<string> { Data = null, Message = "password changed successfully", Succeeded = true };
+                    }
+                    else
+                        return new Response<string> { Data = null, Message = "password changed failed", Succeeded = false };
+                }
+                else
+                    return new Response<string> { Data = null, Message = "The old password is wrong", Succeeded = false };
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 
 }

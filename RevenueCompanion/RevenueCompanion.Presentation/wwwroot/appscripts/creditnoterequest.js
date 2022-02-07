@@ -141,7 +141,10 @@
                         sortIndex: 0,
                         sortOrder: 'asc',
                         //fixed: true,
-                        cssClass: 'font-bold'
+                        cssClass: 'font-bold',
+                        cellTemplate: function (container, options) {
+                            container.text(formatDate(options.data.dateRequested));
+                        }
 
                     },
                     {
