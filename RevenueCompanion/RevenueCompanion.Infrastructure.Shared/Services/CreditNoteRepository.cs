@@ -194,13 +194,23 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
                         if(request.CreditNoteRequestTypeId == 1)
                         {
                             var collectionReport = await _icmaCollectionContext.CollectionReports.FirstOrDefaultAsync(c => c.PaymentRefNumber == request.PaymentReferenceNumber);
-                            collectionReport.UsedByPlatform = assessment.Platformcode;
-                            collectionReport.Balance = collectionReport.Balance - (decimal)(creditNote.AmountUsed);
-                            collectionReport.PayerUtin = assessment.AgentUtin;
-                            collectionReport.PlatformCode = assessment.Platformcode;
-                            collectionReport.IsPushedToPlatformOwner = true;
-                            //_icmaCollectionContext.CollectionReports.Update(collectionReport);
-                            var updater = await _icmaCollectionContext.SaveChangesAsync();
+                            if(collectionReport != null)
+                            {
+                                collectionReport.UsedByPlatform = assessment.Platformcode;
+                                collectionReport.Balance = collectionReport.Balance - (decimal)(creditNote.AmountUsed);
+                                collectionReport.PayerUtin = assessment.AgentUtin;
+                                collectionReport.PlatformCode = assessment.Platformcode;
+                                collectionReport.IsPushedToPlatformOwner = true;
+                                var updater = await _icmaCollectionContext.SaveChangesAsync();
+                            }
+                            var reconciliationInfo = await _reconcileContext.Collection.Where(c => c.PaymentRefNumber.ToLower() == request.PaymentReferenceNumber.ToLower().Trim()).FirstOrDefaultAsync();
+                            if (reconciliationInfo != null)
+                            {
+                                //reconciliationInfo.b = reconciliationInfo.Balance - (decimal)(creditNote.AmountUsed);
+                                reconciliationInfo.UsedByPlatform = assessment.Platformcode;
+                                var updater2 = await _reconcileContext.SaveChangesAsync();
+                            }
+
                         }
 
 
