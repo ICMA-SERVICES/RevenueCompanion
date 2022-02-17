@@ -173,70 +173,71 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
                     var apiResult = await PostToMrIsholaEndpoint(creditRequestId, comment);
                     if(apiResult)
                     {
-                        var user = await _userManager.FindByIdAsync(_authenticatedUser.UserId);
-                        //save approval
-                        var approverDetails = new CreditNoteRequestApprovalDetail
-                        {
-                            ActedUponBy = $"{user.FirstName}  {user.LastName}",
-                            ApproverUserId = user.Id,
-                            Comment = comment,
-                            CreatedBy = _authenticatedUser.UserId,
-                            CreatedOn = DateTime.Now,
-                            CreditNoteRequestId = creditRequestId,
-                            IsDeleted = false,
-                            IsApproved = isApproved,
-                            Status = "Approved",
-                        };
+                        //var user = await _userManager.FindByIdAsync(_authenticatedUser.UserId);
+                        ////save approval
+                        //var approverDetails = new CreditNoteRequestApprovalDetail
+                        //{
+                        //    ActedUponBy = $"{user.FirstName}  {user.LastName}",
+                        //    ApproverUserId = user.Id,
+                        //    Comment = comment,
+                        //    CreatedBy = _authenticatedUser.UserId,
+                        //    CreatedOn = DateTime.Now,
+                        //    CreditNoteRequestId = creditRequestId,
+                        //    IsDeleted = false,
+                        //    IsApproved = isApproved,
+                        //    Status = "Approved",
+                        //};
 
-                        await _context.CreditNoteRequestApprovalDetails.AddAsync(approverDetails);
-                        await _context.SaveChangesAsync();
+                        //await _context.CreditNoteRequestApprovalDetails.AddAsync(approverDetails);
+                        //await _context.SaveChangesAsync();
 
-                        if(request.CreditNoteRequestTypeId == 1)
-                        {
-                            var collectionReport = await _icmaCollectionContext.CollectionReports.FirstOrDefaultAsync(c => c.PaymentRefNumber == request.PaymentReferenceNumber);
-                            if(collectionReport != null)
-                            {
-                                collectionReport.UsedByPlatform = assessment.Platformcode;
-                                collectionReport.Balance = collectionReport.Balance - (decimal)(creditNote.AmountUsed);
-                                collectionReport.PayerUtin = assessment.AgentUtin;
-                                collectionReport.PlatformCode = assessment.Platformcode;
-                                collectionReport.IsPushedToPlatformOwner = true;
-                                var updater = await _icmaCollectionContext.SaveChangesAsync();
-                            }
-                            var reconciliationInfo = await _reconcileContext.Collection.Where(c => c.PaymentRefNumber.ToLower() == request.PaymentReferenceNumber.ToLower().Trim()).FirstOrDefaultAsync();
-                            if (reconciliationInfo != null)
-                            {
-                                //reconciliationInfo.b = reconciliationInfo.Balance - (decimal)(creditNote.AmountUsed);
-                                reconciliationInfo.UsedByPlatform = assessment.Platformcode;
-                                var updater2 = await _reconcileContext.SaveChangesAsync();
-                            }
+                        //if(request.CreditNoteRequestTypeId == 1)
+                        //{
+                        //    var collectionReport = await _icmaCollectionContext.CollectionReports.FirstOrDefaultAsync(c => c.PaymentRefNumber == request.PaymentReferenceNumber);
+                        //    if(collectionReport != null)
+                        //    {
+                        //        collectionReport.UsedByPlatform = assessment.Platformcode;
+                        //        collectionReport.Balance = collectionReport.Balance - (decimal)(creditNote.AmountUsed);
+                        //        collectionReport.PayerUtin = assessment.AgentUtin;
+                        //        collectionReport.PlatformCode = assessment.Platformcode;
+                        //        collectionReport.IsPushedToPlatformOwner = true;
+                        //        var updater = await _icmaCollectionContext.SaveChangesAsync();
+                        //    }
+                        //    var reconciliationInfo = await _reconcileContext.Collection.Where(c => c.PaymentRefNumber.ToLower() == request.PaymentReferenceNumber.ToLower().Trim()).FirstOrDefaultAsync();
+                        //    if (reconciliationInfo != null)
+                        //    {
+                        //        //reconciliationInfo.b = reconciliationInfo.Balance - (decimal)(creditNote.AmountUsed);
+                        //        reconciliationInfo.UsedByPlatform = assessment.Platformcode;
+                        //        var updater2 = await _reconcileContext.SaveChangesAsync();
+                        //    }
 
-                        }
+                        //}
 
 
-                        //Create audit
-                        await _auditRepository.CreateAudit(_authenticatedUser.UserId, $"Approved a credit note request with payment ref number: {request.PaymentReferenceNumber}");
+                        ////Create audit
+                        //await _auditRepository.CreateAudit(_authenticatedUser.UserId, $"Approved a credit note request with payment ref number: {request.PaymentReferenceNumber}");
 
-                        if (approverDetails.CreditNoteRequestApprovalDetailId > 0)
-                        {
-                            //if successful, increment request approval count by 1
-                            request.ApprovalCount += 1;
-                            _context.CreditNoteRequest.Update(request);
-                            await _context.SaveChangesAsync();
-                            //after incrementing by 1, check if it has reach the maximum approval required
-                            if (request.ApprovalCount >= request.NoOfRequiredApproval)
-                            {
-                                //max limit reached
-                                request.IsApproved = true;
-                                request.DateApproved = DateTime.Now;
-                                _context.CreditNoteRequest.Update(request);
-                                await _context.SaveChangesAsync();
-                                await _auditRepository.CreateAudit(_authenticatedUser.UserId, $"Gave a final approval to a  credit note request with payment ref number: {request.PaymentReferenceNumber} and it has completed its approval life circle");
-                            }
-                            return GetApprovalResponse(200, "Approved successfully.", true, true);
-                        }
-                        return GetApprovalResponse(400, "An error occured while processing your request, please try again.", false, false);
+                        //if (approverDetails.CreditNoteRequestApprovalDetailId > 0)
+                        //{
+                        //    //if successful, increment request approval count by 1
+                        //    request.ApprovalCount += 1;
+                        //    _context.CreditNoteRequest.Update(request);
+                        //    await _context.SaveChangesAsync();
+                        //    //after incrementing by 1, check if it has reach the maximum approval required
+                        //    if (request.ApprovalCount >= request.NoOfRequiredApproval)
+                        //    {
+                        //        //max limit reached
+                        //        request.IsApproved = true;
+                        //        request.DateApproved = DateTime.Now;
+                        //        _context.CreditNoteRequest.Update(request);
+                        //        await _context.SaveChangesAsync();
+                        //        await _auditRepository.CreateAudit(_authenticatedUser.UserId, $"Gave a final approval to a  credit note request with payment ref number: {request.PaymentReferenceNumber} and it has completed its approval life circle");
+                        //    }
+                        //    return GetApprovalResponse(200, "Approved successfully.", true, true);
+                        //}
+                        //return GetApprovalResponse(400, "An error occured while processing your request, please try again.", false, false);
 
+                        return GetApprovalResponse(200, "Approved successfully.", true, true);
                     }
                     else
                     {

@@ -156,6 +156,7 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
                                 MenuSetupId = parentMenu.MenuSetupId,
                                 MenuName = parentMenu.MenuName,
                                 MenuId = parentMenu.MenuId,
+                                IsActive = parentMenu.IsActive,
                                 MenuUrl = parentMenu.MenuUrl,
                                 ParentMenuId = parentMenu.ParentMenuId,
                                 UserId = UserID,
@@ -168,6 +169,7 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
                             MenuName = menuDetail.MenuName,
                             MenuId = menuDetail.MenuId,
                             MenuUrl = menuDetail.MenuUrl,
+                            IsActive = menuDetail.IsActive,
                             ParentMenuId = menuDetail.ParentMenuId,
                             UserId = UserID,
                             IconClass = menuDetail.IconClass
@@ -180,6 +182,7 @@ namespace RevenueCompanion.Infrastructure.Shared.Services
                             MenuSetupId = menuDetail.MenuSetupId,
                             MenuName = menuDetail.MenuName,
                             MenuId = menuDetail.MenuId,
+                            IsActive = menuDetail.IsActive,
                             MenuUrl = menuDetail.MenuUrl,
                             ParentMenuId = menuDetail.ParentMenuId,
                             UserId = UserID,

@@ -129,7 +129,7 @@ $(document).ready(function () {
                 else {
                     response = response.searchResult
                     swal({
-                        title: "An error occured!",
+                        title: "Info",
                         text: response.message,
                         icon: "warning",
                         closeOnClickOutside: false,
@@ -198,6 +198,7 @@ $(document).ready(function () {
                     document.getElementById('DateCreated').innerHTML = response.data.dateCreated;
                     document.getElementById('AssessmentCreatedBy').innerHTML = response.data.assessmentCreatedBy;
 
+                    $('#searchAssessmentRefBtn').removeAttr('disabled');
 
 
                     var $active = $('.wizard .nav-tabs li.active');
@@ -206,7 +207,7 @@ $(document).ready(function () {
                 }
                 else {
                     swal({
-                        title: "An error occured!",
+                        title: "Info",
                         text: response.message,
                         icon: "warning",
                         closeOnClickOutside: false,

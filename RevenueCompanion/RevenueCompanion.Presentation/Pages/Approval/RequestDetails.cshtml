@@ -93,13 +93,13 @@
                                     Actual Amount
                                 </dt>
                                 <dd class="col-lg-9 ">
-                                    @Model.CreditNoteDetail.CreditNoteRequest.ActualAmount.ToString("c") NGN
+                                    @String.Format("{0:n}", Model.CreditNoteDetail.CreditNoteRequest.ActualAmount) NGN
                                 </dd>
                                 <dt class="col-lg-3">
                                     Amount Used
                                 </dt>
                                 <dd class="col-lg-9 ">
-                                    @Model.CreditNoteDetail.CreditNoteRequest.AmountUsed.ToString("c") NGN
+                                    @String.Format("{0:n}", Model.CreditNoteDetail.CreditNoteRequest.AmountUsed) NGN
                                 </dd>
                                 <dt class="col-lg-3">
                                     Requested By
@@ -114,7 +114,7 @@
                                     @Model.CreditNoteDetail.CreditNoteRequest.DateRequested.ToString("dd/MM/yyyy hh:mm tt"))
                                 </dd>
                                 <dt class="col-lg-3">
-                                    Approval Needed ( <strong> @Model.CreditNoteDetail.CreditNoteRequest.NoOfRequiredApproval</strong>)
+                                    Approval Level (<strong>@Model.CreditNoteDetail.CreditNoteRequest.NoOfRequiredApproval</strong>)
                                 </dt>
                                 <dd class="col-lg-9 ">
                                     &nbsp; &nbsp; Approvals so far &nbsp; <strong> @Model.CreditNoteDetail.CreditNoteRequest.ApprovalCount</strong>

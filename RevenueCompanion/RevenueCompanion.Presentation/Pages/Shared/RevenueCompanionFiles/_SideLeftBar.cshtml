@@ -22,30 +22,34 @@
                 <nav class="navigation">
                     <ul class="list-unstyled">
                         @*<li>
-                            <a href="index-2.html"><i class="ion-home"></i> <span class="nav-label">Dashboard</span></a>
-                        </li>*@
+            <a href="index-2.html"><i class="ion-home"></i> <span class="nav-label">Dashboard</span></a>
+        </li>*@
                         @foreach (var menuNames in menuSetupResults.Where(n => n.ParentMenuId == "*" || n.ParentMenuId == null))
                         {
-                            if (menuNames.ParentMenuId is null)
+                            if (menuNames.IsActive == true)
                             {
+                                if (menuNames.ParentMenuId is null && menuNames.IsActive == true)
+                                {
 
-                                <li>
-                                    <a asp-page="@menuNames.MenuUrl" asp-route-menuSetupId="@menuNames.MenuSetupId"><i class="@menuNames.IconClass"></i> <span class="nav-label">@menuNames.MenuName</span></a>
-                                </li>
-                            }
-                            else
-                            {
-                                <li class="has-submenu">
-                                    <a href="#"><i class="@menuNames.IconClass"></i> <span class="nav-label">@menuNames.MenuName</span> <span class="caret pull-right m-t-10"></span></a>
-                                    <ul class="list-unstyled">
-                                        @foreach (var submenu in menuSetupResults.Where(n => n.ParentMenuId == menuNames.MenuId))
-                                        {
-                                            <li><a asp-page="@submenu.MenuUrl" asp-route-menuSetupId="@submenu.MenuSetupId">@submenu.MenuName</a></li>
-                                        }
-                                       
-                                    </ul>
-                                </li>
-                               
+                                    <li>
+                                        <a asp-page="@menuNames.MenuUrl" asp-route-menuSetupId="@menuNames.MenuSetupId"><i class="@menuNames.IconClass"></i> <span class="nav-label">@menuNames.MenuName</span></a>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li class="has-submenu">
+                                        <a href="#"><i class="@menuNames.IconClass"></i> <span class="nav-label">@menuNames.MenuName</span> <span class="caret pull-right m-t-10"></span></a>
+                                        <ul class="list-unstyled">
+                                            @foreach (var submenu in menuSetupResults.Where(n => n.ParentMenuId == menuNames.MenuId && n.IsActive == true))
+                                            {
+                                                <li><a asp-page="@submenu.MenuUrl" asp-route-menuSetupId="@submenu.MenuSetupId">@submenu.MenuName</a></li>
+                                            }
+
+                                        </ul>
+                                    </li>
+
+                                }
+
                             }
                         }
 
